@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Anxiety</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="./scripts/getWeatherInfo.js"></script> 
+    <script src="./scripts/renderCharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js"></script>
+    <link rel="stylesheet" href="./styles/map.css">
+
+</head>
+<body>
+
+    <h1 style="text-align: center;">Should you feel climate anxious Today?</h1>
+    <P>Is it significantly warmer where you are today than it would have been during an arbitary year of your choosing </P>
+    <p>(Perhaps when you were a child?)</p>
+
+
+    <input type="text" id="postcodeInput" placeholder="What's your postcode?"><br><br>
+    <input type="text" id="comparisonInput" placeholder="Year to compare?"><br><br>
+    <button id="submitBtn" class="btn btn-info btn-lg" onclick="renderCharts()">Submit</button>
+
+    <h2 id="todayLabel" hidden="true">Todays Max Temperature:</h2>
+    <h1 id="todayTemp" hidden="true"></h1>
+
+    <h2 id="comparisonLabel" hidden="true"></h2>
+    <h1 id="comparisonTemp" hidden="true"></h1>
+    <div id="buttonContainer"  hidden="true">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#revealModal" hidden="true" >How should I feel about this?</button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="revealModal" role="dialog">
+        <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="modalTitle"></h4>
+            </div>
+            <div class="modal-body">
+            <p id="modalBody"></p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="revealArticle()">Close</button>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <div id="articleContainer" hidden="true", style="padding-top: 20px ">
+
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div id="mapContainer" style="transform: rotate(180deg)">
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src="./scripts/map.js"></script>
+</body>
+</html>
