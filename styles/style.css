@@ -1,0 +1,34 @@
+.divider{
+	width: 75px;
+        border: none;
+        border-top: 2px solid;
+        margin: 40px auto -10px auto;
+}
+
+.col-medium {
+	width: 100%;
+	max-width: 680px;
+	margin: 0 24px;
+	
+}
+header, section {
+    display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+text-align: center;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+margin: auto;
+padding: 0;
+}
+
+.v-padded {
+    box-sizing: border-box;
+    padding: 40px 0;
+  }
+
+  

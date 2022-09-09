@@ -28,6 +28,10 @@ var colorScale = d3.scaleThreshold()
       // set the color of each country
       .attr("fill", function (d) {
         d.difference = d.properties.newTemp - d.properties.oldTemp
+        console.log(d.properties.geo_region)
+        console.log(d.properties.oldTemp)
+        console.log(d.properties.newTemp)
+        console.log(d.difference)
         return colorScale(d.difference);
       })
       .style("stroke", "transparent")

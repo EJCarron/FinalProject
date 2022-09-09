@@ -18,15 +18,18 @@
     <script src="./scripts/renderCharts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js"></script>
     <link rel="stylesheet" href="./styles/map.css">
-
+    <link rel="stylesheet" href="./styles/style.css" />
 </head>
 <body>
-
-    <h1 style="text-align: center;">Should you feel climate anxious Today?</h1>
-    <P>Is it significantly warmer where you are today than it would have been during an arbitary year of your choosing </P>
-    <p>(Perhaps when you were a child?)</p>
-
-
+    <header>
+        <div class="v-padded col-wide middle" style="position: relative">
+            <h1 style="margin-top: 20px; margin-left: 10px">Should you feel climate anxious Today?</h1>
+            <p>Daily worrying about whether the weather is how it should be? Having thoughts like: “Is 14 degrees in January normal?”, “I’m sure trees didn’t used to blossom in February.” or “It’s so hot it feels like we’re in Spain!”</p>
+            <p>Wonder no longer, with this tool you can check live weather data against the historical record, to get a definitive answer on exactly how much climate anxiety you should be feeling today.</p>
+            <P>Is it significantly warmer where you are today than it would have been during an arbitary year of your choosing </P>
+            <p>(Perhaps when you were a child?)</p>
+        </div>
+    </header>
     <input type="text" id="postcodeInput" placeholder="What's your postcode?"><br><br>
     <input type="text" id="comparisonInput" placeholder="Year to compare?"><br><br>
     <button id="submitBtn" class="btn btn-info btn-lg" onclick="renderCharts()">Submit</button>
@@ -62,13 +65,70 @@
     
     <div id="articleContainer" hidden="true", style="padding-top: 20px ">
 
+    <section>
+        <div class="col-medium">
 
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            Whatever the “Should You Be Feeling Climate Anxiety Today”-ometer said, shouldn’t have an effect on how you feel about the future of the planet. Individual days above the average are not indicators of impending doom, for that you need to look at large scale climate trend data – although I’m not sure if you’ve been reading the news recently, because things aren’t actually looking too great in that department.
         </p>
-        <div id="mapContainer" style="transform: rotate(180deg)">
+     
+            <p>
+                Climate anxiety is recognised as feelings of despair, hopelessness and doom caused by worry over the future of the planet. Like many issues today there is a stark generational divide, with young people affected at far higher rates than older generations. 
+            </p>
+        
 
+            <p>
+                Close to half of the young people are affected by climate anxiety, reporting that impacts their ability to function on a day to day basis, according to the latest study by the University of Bath. The study surveyed 10,000 16 to 25 year olds from around the world. Unsurprisingly countries that have already experienced extreme weather events are affected at higher rates. The global average for respondents agreeing with the statement: “The future is frightening.” is 75%. The proportion in Portugal was 81% and in the Philippines it is a jaw dropping 92%.
+            </p>
         </div>
+        </section>
+
+        <img src="./data/brownGrass.jpeg" alt="brown grass." style="padding-top: 10px; padding-left: 20px; padding-bottom: 10px;">
+
+        <section>
+            <div class="col-medium">
+            <p>
+                The advice for young people – or those of any age – for dealing with the mental health problems related to climate anxiety focuses on a personal soothing and consolation. Techniques that can be a relief in the short term but do nothing to fix the route cause of the problem. It is treating the symptoms rather than the cause, a common problem in many fields of medicine. One thing is for certain: social media does nothing to aid the situation.
+            </p>
+        
+        
+            <p>
+                Many people know the all too recognisable feeling of a sudden pit in their stomach when scrolling onto an apocalyptic headline. Made all the more jarring by the sudden tonal shifts experienced while scrolling social media timelines: Cat video, terrorist attack in East Africa, Joe Biden falling off his bike, global animal populations have declined 70% in the last 50 years, a heartfelt post about a friends mother losing her battle with cancer, skydiving compilation video, a picture of your cousin’s wedding, Greenland ice melting will raise sea levels by ten inches, another cat video, China experiences the worst drought in history. This nonstop whiplashing of emotion experienced on social media is unlike anything that the human brain has previously encountered, and it’s unclear what long term effects this will have on our minds. 
+            </p>
+        
+            <p>
+                Social media is designed like a fruit machine, to keep stringing us along with small rewards of content that trigger releases of serotonin and dopamine in our brains, even if much of what we are seeing is upsetting. This results in many people spending hours of their day scrolling on their immiserated and horrified, unable to look away. 
+            </p>
+        
+            <p>
+                Outside of our little black glass rectangles of horror there were inescapable signs of the coming climate apocalypse this summer. On the 18th of July as temperatures hit 40 degrees celsius for the  first time, we were reminded that these conditions would become the norm in a decade or so. The parks turned to deserts and reservoirs dried out revealing sunken villages lost to the ages. All the while our countries leaders told us to “enjoy the weather.” 
+            </p>
+        </div>
+        </section>
+        <h3>July Temperature higher than monthly averages per region</h3>
+        <div id="mapContainer" style="transform: rotate(180deg)"></div>
+
+        <section>
+            <div class="col-medium">
+            <p>
+                The University of Bath study reported that many of the young people surveyed reported that their feelings of helplessness and betrayal were in large part fuelled by their governments inaction. 
+            </p>
+        
+            <p>
+                The current Tory party leadership election has no mention of tackling climate change, other than Liz Truss saying that she’s considering scrapping the green energy levy in order to reduce consumer bills. It’s unclear whether this is a result of the candidates’ genuine apathy toward stopping climate change, or because their target audience during the leadership campaign are Conservative party members, for whom this isn’t a priority: a YouGov poll of Tory members show’s that only 4% of them put net zero by 2050 in their top three concerns. Which is lucky for the Conservatives as it’s a target that they are already failing to meet. A statistic made all the more terrifying by the fact that many experts predict that the target of 2050 for net zero is in fact far too late. It can be argued that the media are complicit in this: for example Truss and Sunak were only asked and then talked about climate change for a total of one minute and 59 seconds across all live leadership debates.
+            </p>
+        
+            <p>
+                However many young people are attempting to take things into their own hands, such as the Portuguese children that have filed a case at the European court of Human Rights suing 33 countries over their inaction on climate change. They are demanding that these countries make more ambitious targets and stick to the
+            </p>
+        
+            <p>
+                Climate anxiety is something that may not currently everyone, but it’s cause is certainly coming for us all. Right now the UK, and other historically cooler countries, are living through the portents of what lies ahead, we are just aware of the real calamities happening somewhere else,  as the news becomes progressively more and more frightening. Which reminds us of the old proverb “Climate Change is watching videos of natural disasters on your phone, until you’re the one filming it.”
+            </p>
+        </div>
+        </section>
+     
+        
 
 
 
